@@ -1,0 +1,393 @@
+/* Общие стили */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Arial', sans-serif;
+}
+
+body {
+	background-color: #1a1a1a;
+	color: #333;
+}
+
+/* Header */
+header {
+	background: linear-gradient(45deg, #333, #000000);
+	color: white;
+	padding: 1.5rem;
+}
+
+.header-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.logo {
+	font-size: 2rem;
+	color: #ffd700; /* Золотой цвет для акцента */
+}
+
+.contact-info p {
+	margin: 0.3rem 0;
+}
+
+.contact-info a {
+	color: #ffd700;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.contact-info a:hover {
+	text-decoration: underline;
+}
+
+/* Main Content */
+main {
+	padding: 2rem;
+}
+
+.buyers h2 {
+	color: #333;
+	font-size: 1.8rem;
+	margin-bottom: 1.5rem;
+	text-align: center;
+}
+
+ul#buyers-list {
+	list-style: none;
+	background-color: #cccccc;
+	border: 1px solid #d0d0d0;
+	padding: 1.5rem;
+	border-radius: 12px;
+	max-width: 500px;
+	margin: 0 auto;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+ul#buyers-list li {
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem 0;
+	font-size: 1.1rem;
+	border-bottom: 1px solid #eee;
+	transition: all 0.3s ease;
+}
+
+ul#buyers-list li:hover {
+	color: #444;
+	background-color: #f8f8f8;
+}
+
+ul#buyers-list li:last-child {
+	border-bottom: none;
+}
+
+.bn-rate {
+	margin-top: 2rem;
+	font-size: 1.3rem;
+	color: #008000; /* Зеленый цвет для акцента */
+	text-align: center;
+}
+
+.bn-rate span {
+	font-weight: bold;
+	color: #008000;
+}
+
+.stats-section {
+	font-size: 1.5rem;
+	color: #ffd700;
+	background-color: #2e2e2e;
+	padding: 2rem;
+	text-align: center;
+	border-radius: 12px;
+	box-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+/* Основной стиль секции */
+.rate-section {
+	text-align: center;
+	background: #1d1f21;
+	padding: 2rem;
+	border-radius: 10px;
+	box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+	color: #ffffff;
+}
+
+/* Стиль заголовка с иконкой */
+.rate-header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	font-size: 1.25rem;
+}
+
+.growth-icon {
+	font-size: 1.5rem;
+	animation: pulse 1.5s infinite;
+}
+
+/* Эффект светящегося пульсирования */
+@keyframes pulse {
+	0%,
+	100% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.2);
+		color: #ffd700;
+	}
+}
+
+/* Прогресс-бар */
+.progress-bar-container {
+	width: 80%;
+	height: 20px;
+	background-color: #333;
+	border-radius: 10px;
+	margin: 1rem auto;
+	overflow: hidden;
+}
+
+.progress-bar {
+	height: 100%;
+	background: linear-gradient(90deg, #ffd700, #ff8c00);
+	width: 0; /* Начинаем с 0, увеличим в JS */
+	transition: width 2.5s ease-in-out;
+}
+
+/* Текущая процентная ставка */
+.rate-value {
+	font-size: 2rem;
+	font-weight: bold;
+	margin-top: 1rem;
+	color: #ffd700;
+	animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+	0% {
+		text-shadow: 0 0 5px #ffd700, 0 0 10px #ff8c00;
+	}
+	100% {
+		text-shadow: 0 0 20px #ffd700, 0 0 30px #ff8c00;
+	}
+}
+
+/* Верхний блок курса в сомах */
+.header {
+	width: 300px;
+	background-color: #000000;
+	padding: 1rem;
+	text-align: center;
+	border-radius: 10px;
+}
+
+.bn-rate-som {
+	color: #cebd5d; /* Золотой цвет для акцента */
+	font-size: 1.8rem;
+	font-weight: bold;
+	animation: glowSom 2s infinite alternate;
+}
+
+@keyframes glowSom {
+	0% {
+		text-shadow: 0 0 5px #ffd700, 0 0 10px #ff8c00;
+	}
+	100% {
+		text-shadow: 0 0 20px #ffd700, 0 0 30px #ff8c00;
+	}
+}
+
+/* Секция для роста курса */
+.rate-section {
+	text-align: center;
+	background: #1d1f21;
+	padding: 2rem;
+	border-radius: 10px;
+	box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+	color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.dashboard {
+	display: flex;
+	width: 100%;
+}
+
+.sidebar {
+	width: 250px;
+	background-color: #1e1e1e;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.logo {
+	font-size: 24px;
+	font-weight: bold;
+
+	margin-bottom: 20px;
+}
+
+nav ul {
+	list-style: none;
+	padding: 0;
+}
+
+nav ul li {
+	padding: 10px 0;
+	cursor: pointer;
+	color: #e0e0e0;
+	transition: color 0.3s;
+}
+
+nav ul li:hover {
+	color: #bb86fc;
+}
+
+.settings {
+	margin-top: auto;
+	padding: 10px 0;
+	cursor: pointer;
+	color: #e0e0e0;
+	transition: color 0.3s;
+}
+
+.settings:hover {
+	color: #bb86fc;
+}
+
+.main-content {
+	flex-grow: 1;
+	padding: 20px;
+	background-color: #121212;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.currency-select span {
+	margin-right: 10px;
+	color: #e0e0e0;
+}
+
+.currency-select button {
+	background-color: #bb86fc;
+	color: #fff;
+	border: none;
+	padding: 10px 20px;
+	cursor: pointer;
+	border-radius: 5px;
+	transition: background-color 0.3s;
+}
+
+.currency-select button:hover {
+	background-color: #9c27b0;
+}
+
+.user-info {
+	display: flex;
+	align-items: center;
+}
+
+.notifications {
+	width: 24px;
+	height: 24px;
+	background-color: #bb86fc;
+	border-radius: 50%;
+	margin-right: 10px;
+	position: relative;
+}
+
+.user-avatar {
+	width: 32px;
+	height: 32px;
+	background-color: #bb86fc;
+	color: #121212;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: bold;
+}
+
+.overview {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+	color: white;
+}
+
+.portfolio-value,
+.volume {
+	flex: 1;
+	text-align: center;
+	background-color: #1e1e1e;
+	padding: 20px;
+	border-radius: 10px;
+	margin: 0 10px;
+}
+
+.portfolio-stats,
+.my-portfolio,
+.transaction,
+.actions {
+	margin-bottom: 20px;
+}
+
+.chart {
+	height: 200px;
+	background-color: #1e1e1e;
+	border-radius: 10px;
+	margin-bottom: 20px;
+	padding: 10px;
+}
+
+.current-stats ul {
+	list-style: none;
+	padding: 0;
+}
+
+.current-stats ul li {
+	margin: 10px 0;
+}
+
+.actions .buy-sell-convert {
+	text-align: center;
+	background-color: #1e1e1e;
+	padding: 20px;
+	border-radius: 10px;
+}
+.btn {
+	cursor: pointer;
+}
