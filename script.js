@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			datasets: [
 				{
 					label: 'Portfolio Value',
-					data: [1000,1500,2000],
+					data: [100,150,200],
 					borderColor: '#BB86FC',
 					borderWidth: 2,
 					fill: false,
@@ -50,9 +50,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Данные покупателей
 const buyers = [
-	{ name: 'Ажыбеков Алихан', amount: 2.5 },
-	{ name: 'Джунусбеков Алишер', amount: 2.5 },
-	{ name: 'Кишенбоев Темирлан', amount: 2.25 },
+	{ name: 'Ажыбеков Алихан', amount: 25.0 },
+	{ name: 'Джунусбеков Алишер', amount: 25.0 },
+	{ name: 'Кишенбaев Темирлан', amount: 22.5 },
+	{ name: 'Массабекова Гулайым', amount: 1.0 },
 	
 ]
 
